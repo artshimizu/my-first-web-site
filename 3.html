@@ -1,56 +1,70 @@
 <!doctype html>
 <html>
 <head>
-  <title>WEB1 - JavaScript</title>
+  <title>株式会社　一福1 - GolfCompetition</title>
   <meta charset="utf-8">
   <script>
-  function LinksSetColor(color){
-    var alist = document.querySelectorAll('a');
-    var i = 0;
-    while(i < alist.length){
-        alist[i].style.color = color;
-        i = i + 1;
+  var Links = {
+    setColor:function (color){
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length){
+          alist[i].style.color = color;
+          i = i + 1;
+      }
     }
   }
-  function BodySetColor(color){
-    document.querySelector('body').style.color = color;
-  }
-  function BodySetBackgroundColor(color){
-    document.querySelector('body').style.backgroundColor = color;
+  var Body = {
+    setColor:function (color){
+      document.querySelector('body').style.color = color;
+    },
+    setBackgroundColor:function (color){
+      document.querySelector('body').style.backgroundColor = color;
+    }
   }
   function nightDayHandler(self){
     var target = document.querySelector('body');
     if(self.value === 'night'){
-      BodySetBackgroundColor('black');
-      BodySetColor('white');
+      Body.setBackgroundColor('black');
+      Body.setColor('white');
       self.value = 'day';
 
-      LinksSetColor('powderblue');
+      Links.setColor('powderblue');
     } else {
-      BodySetBackgroundColor('white');
-      BodySetColor('black');
+      Body.setBackgroundColor('white');
+      Body.setColor('black');
       self.value = 'night';
 
-      LinksSetColor('blue');
+      Links.setColor('blue');
     }
   }
   </script>
 </head>
 <body>
-  <h1><a href="index.html">WEB</a></h1>
+  <h1><a href="index.html">株式会社　一福</a></h1>
   <input id="night_day" type="button" value="night" onclick="
     nightDayHandler(this);
   ">
   <ol>
-    <li><a href="1.html">HTML</a></li>
-    <li><a href="2.html">CSS</a></li>
-    <li><a href="3.html">JavaScript</a></li>
+    <li><a href="1.html">Grand Prix</a></li>
+    <li><a href="2.html">in The Bar</a></li>
+    <li><a href="3.html">GolfCompetition</a></li>
   </ol>
-  <h2>JavaScript</h2>
+  <h2>GolfCompetition</h2>
   <p>
-    JavaScript (/ˈdʒɑːvəskrɪpt/), often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries. All major web browsers have a dedicated JavaScript engine to execute the code on users' devices.
+    <strong><u>開催日</u></strong>   10月24日(月)	午前8:45 より　OUT·INスタート
+    受付後、8時10分に集合し、ルール説明等を行います。(時間厳守)<br>
+    <strong><u>場	所</u></strong>   <a href="https://mgc.tatemono-golf.com/access/" target="_blank" title="アクセス | 【公式】都ゴルフ倶楽部">    都ゴルフ倶楽部</a>新ペリア方式で開催
+            . 山梨県都留市戸沢1353番地　　TEL：0554-45-3111<br>
+    <strong><u>参加費</u></strong>   プレー費　10,700円税込（プレー代·乗用カート代·ワンドーリンク·昼食代）
+        会　　費　10,000円　申し込み時に御支払いください。<br>
+    <strong><u>パーティー</u></strong>   新宿　クラブ　グランプリにて　18時より<br>
+    <strong><u>賞　金</u></strong>   優勝　70,000円　準優勝, 50,000円, 3位　30,000円　ベストグロ　30,000円
+    ブービー賞、ブービーメーカー、ドビー賞、ニアピン賞、ドラゴン賞、
+    当日賞、ラッキーセブン賞　他　<br>
+    <strong><u>連絡先</u></strong>   洪　ママ 090-4938-1884<br>
+    金　祥勲 090-1036-2820
 
-    JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard.[10] It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM).
   </p>
 </body>
 </html>
